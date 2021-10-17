@@ -1,0 +1,115 @@
+:root {
+  --clr-pale-blue: hsl(225, 100%, 94%);
+  --clr-bright-blue: hsl(245, 75%, 52%);
+  --clr-very-pale-blue: hsl(225, 100%, 98%);
+  --clr-desaturated-blue: hsl(224, 23%, 55%);
+  --clr-dark-blue: hsl(223, 47%, 23%);
+  --font-family: "Red Hat Display", sans-serif;
+  --font-family-500: 500;
+  --font-family-700: 700;
+  --font-family-900: 900;
+}
+body {
+  background-image: url(/images/pattern-background-desktop.svg);
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-color: var(--clr-pale-blue);
+  font-family: var(--font-family);
+}
+section,
+.container-flex,
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.2em;
+}
+h2,
+p {
+  text-align: center;
+  font-family: var(--font-family-500);
+}
+h2 {
+  font-weight: var(--font-family-900);
+}
+.Illustration {
+  width: 100%;
+  object-fit: cover;
+}
+button {
+  display: block;
+}
+.container-flex {
+  flex-direction: column;
+  width: min(90%, 400px);
+  background-color: var(--clr-very-pale-blue);
+  border-radius: 20px;
+  overflow: hidden;
+}
+.container-flex > div:nth-child(2) {
+  padding: 0.5rem 1rem;
+  margin: 1rem;
+}
+.payment {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  background-color: var(--clr-pale-blue);
+  border-radius: 20px;
+  margin: 1rem;
+}
+.Plan-Price {
+  opacity: 70%;
+}
+.change-button {
+  text-decoration-line: underline;
+  color: var(--clr-bright-blue);
+}
+.change-button:hover {
+  filter: brightness(2);
+}
+.buttons {
+  flex-direction: column;
+}
+.buttons > * + * {
+  margin-top: 1rem;
+}
+.Procced-button {
+  padding: 0.7rem;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--clr-bright-blue);
+  color: #fff;
+  font-weight: var(--font-family-700);
+  box-shadow: 0px 1px 57px 0px rgba(204, 204, 204, 0.75);
+}
+.Procced-button:hover {
+  filter: brightness(1.5);
+}
+.Cancel-button {
+  border: none;
+  background-color: transparent;
+  font-weight: var(--font-family-700);
+  color: var(--clr-desaturated-blue);
+}
+.Cancel-button:hover {
+  color: var(--clr-dark-blue);
+}
+@media screen and (max-width: 375px) {
+  body {
+    background-image: url(/images/pattern-background-mobile.svg);
+  }
+  .payment > *,
+  p {
+    margin: 0.3rem;
+  }
+  .Procced-button {
+    width: 90%;
+  }
+  p {
+    font-size: 0.9rem;
+  }
+}
